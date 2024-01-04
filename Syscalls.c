@@ -1,6 +1,6 @@
 #include <sys/stat.h>
 #include <sys/times.h>
-#include "usart.h"
+#include "Usart.h"
 #include <errno.h>
 #undef errno
 extern int errno;
