@@ -1,0 +1,16 @@
+/* Set a STM32F446RE Nucleo essentials */
+    Status: In progress. (1/3/2023) -> (...)
+    Pseudo Steps:
+        * Create the Linker Source code.
+        * Create the Startup Source code.
+        * Create the Main Source code "SimpleBlink.c".
+        * Creathe the MakeFile.
+
+/* Debug the response of the STM32F446RE Nucleo */
+    Status: On Hold.
+    Pseudo Steps:
+        * 
+/* Install FreeRTOS into the STM32F446RE */
+    Status: On Hold.
+    Pseudo Steps:
+        * 
