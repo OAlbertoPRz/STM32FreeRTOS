@@ -1,9 +1,8 @@
-EXAMPLE_PATH = /home/alberto/Desktop/STMProject/vendorSTM/
 CC=arm-none-eabi-gcc
 CFLAGS=-mcpu=cortex-m4 -mthumb --specs=nano.specs
 CPPFLAGS=-DSTM32F446xx \
-				 -I$(EXAMPLE_PATH)/CMSIS/Device/ST/STM32F4/Include \
-				 -I$(EXAMPLE_PATH)/CMSIS/CMSIS/Core/Include
+				 -I$(PWD)/CMSIS/Device/ST/STM32F4/Include \
+				 -I$(PWD)/CMSIS/CMSIS/Core/Include
 
 LINKER_FILE=linker_script.ld
 LDFLAGS=-T $(LINKER_FILE) -u _printf_float
@@ -24,7 +23,7 @@ SimpleBlink.o: SimpleBlink.c
 Startup.o: Startup.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -c
 
-system_stm32f4xx.o: $(EXAMPLE_PATH)/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c
+system_stm32f4xx.o: $(PWD)/CMSIS/Device/ST/STM32F4/Source/Templates/system_stm32f4xx.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) $^ -c
 
 Syscalls.o: Syscalls.c
