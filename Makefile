@@ -1,5 +1,5 @@
 # Target
-TARGET = main
+TARGET = demo
 # Project
 PROJECT= Demo
 
@@ -21,7 +21,9 @@ DRIVERS_DIR = $(PWD)/Drivers
 BIN_DIR = $(PWD)/Core/Bin
 OBJ_DIR = $(PWD)/Core/Obj
 SRC_DIR = $(PWD)/Core/Src/$(PROJECT)
-INC_DIR = $(PWD)/Core/Inc/$(PROJECT)
+INC_DIR = $(PWD)/Core/Inc/
+PROJECT_DIR = $(PWD)/Core/Inc/$(PROJECT)
+
 
 # Linker File
 STM32_TEMPLATES_DIR = $(DRIVERS_DIR)/STM32CubeF4/Projects/STM32446E-Nucleo/Templates/STM32CubeIDE# 					Has the linker file
@@ -61,7 +63,8 @@ CPPFLAGS= \
 			-I$(FREERTOS_INC_DIR) \
 			-I$(FREERTOS_PORT_DIR) \
 			-I$(HAL_INC_DIR) \
-			-I$(INC_DIR)
+			-I$(INC_DIR) \
+			-I$(PROJECT_DIR)
 
 
 # Compilation Source flags (Only source files)

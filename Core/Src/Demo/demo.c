@@ -17,7 +17,7 @@
  */
 
 /* Includes ------------------------------------------------------------------*/
-#include "main.h"
+#include "demo.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
